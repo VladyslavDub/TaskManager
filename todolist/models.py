@@ -10,6 +10,7 @@ class Category(models.Model):
 
 
 class Tasks(models.Model):
+    #user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=100, verbose_name='Завдання')
     description = models.TextField(blank=True, null=True, verbose_name='Опис завдання')
     task_date = models.DateTimeField(auto_now=True, verbose_name='Дата створення')

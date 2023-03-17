@@ -8,3 +8,12 @@ def home(request):
         'categories': categories
     }
     return render(request, 'base.html', context)
+
+
+def category(request):
+    categories = Category.objects.all()
+    context = {
+        'categories': categories
+    }
+    return render(request, 'categories.html', context)
+
