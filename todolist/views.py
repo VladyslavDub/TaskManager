@@ -3,9 +3,9 @@ from .models import *
 
 
 def home(request):
-    categories = Category.objects.all()
+    tasks = Tasks.objects.all()
     context = {
-        'categories': categories
+        'tasks': tasks
     }
     return render(request, 'base.html', context)
 
